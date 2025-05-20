@@ -30,11 +30,10 @@ public class CancionServices {
 
     public void create(@NotEmpty String nombre, Integer id_genero, Integer duracion,
             @NotEmpty String url, @NotEmpty String tipo, Integer id_album) throws Exception {
-        // Quitamos la validación de duracion > 0
         if (nombre.trim().length() > 0 && url.trim().length() > 0 &&
                 tipo.trim().length() > 0 && id_genero > 0 && id_album > 0) {
             db.getObj().setNombre(nombre);
-            db.getObj().setDuracion(duracion); // Puedes dejarlo en 0 si no lo usas
+            db.getObj().setDuracion(duracion);
             db.getObj().setId_album(id_album);
             db.getObj().setId_genero(id_genero);
             db.getObj().setTipo(TipoArchivoEnum.valueOf(tipo));
@@ -46,7 +45,6 @@ public class CancionServices {
 
     public void update(Integer id, @NotEmpty String nombre, Integer id_genero, Integer duracion, @NotEmpty String url,
             @NotEmpty String tipo, Integer id_album) throws Exception {
-        // Quitamos la validación de duracion > 0
         if (nombre.trim().length() > 0 && url.trim().length() > 0 && tipo.trim().length() > 0
                 && id_genero > 0 && id_album > 0) {
             db.setObj(db.listAll().get(id - 1));

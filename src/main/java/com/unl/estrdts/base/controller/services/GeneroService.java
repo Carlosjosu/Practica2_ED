@@ -21,7 +21,6 @@ public class GeneroService {
         return Arrays.asList(db.listAll().toArray());
     }
 
-    // Crear un nuevo género
     public void createGenero(String nombre) throws Exception {
         if (nombre != null && nombre.trim().length() > 0) {
             db.getObj().setId(db.listAll().getLength() + 1);
@@ -34,7 +33,6 @@ public class GeneroService {
         }
     }
 
-    // Actualizar un género existente
     public void updateGenero(Integer id, String nombre) throws Exception {
         if (id != null && id > 0 && nombre != null && nombre.trim().length() > 0) {
             db.setObj(db.listAll().get(id - 1));

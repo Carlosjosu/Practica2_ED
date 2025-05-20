@@ -2,9 +2,6 @@ package com.unl.estrdts.Practica1;
 
 import java.io.IOException;
 import java.util.List;
-import com.unl.estrdts.Practica1.excepcion.ListEmptyException;
-import com.unl.estrdts.Practica1.Linkendlist;
-import java.util.HashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,6 +15,8 @@ public class Main {
         for (int i = 1; i <= 3; i++) {
             long tiempoInicio = System.currentTimeMillis();
 
+            list.clear();
+
             try {
                 list.loadFromFile(filePath);
                 System.out.println("Datos cargados desde el archivo.");
@@ -29,7 +28,6 @@ public class Main {
             tiempos[i - 1] = totalTiempo;
             System.out.println("Ejecución " + i + ":\t" + totalTiempo + " ms");
         }
-
         List<Integer> elementosRepetidos = repetidosObj.detectarYGuardarRepetidos(list);
         System.out.println("Elementos repetidos: " + elementosRepetidos);
         System.out.println("Número de elementos repetidos: " + elementosRepetidos.size());

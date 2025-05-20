@@ -1,10 +1,5 @@
 package com.unl.estrdts.base.controller.DataStruc.List;
 
-
-//V, K (key, value)
-//E (Dato genereico para colecciones)
-//T (Dato generico para clases genericas)
-
 public class Node<E> {
     private E data;
     private Node<E> next;
@@ -20,11 +15,11 @@ public class Node<E> {
     }
 
     public Node(Node<E> next) {
-        this.data  = null;
+        this.data = null;
         this.next = next;
     }
 
-    //getters and setters
+    // getters and setters
 
     public E getData() {
         return data;
@@ -41,6 +36,5 @@ public class Node<E> {
     public void setNext(Node<E> next) {
         this.next = next;
     }
-
 
 }

@@ -7,14 +7,9 @@ public class Linkendlist<E> {
     private Node<E> last;
     private Integer length;
 
-    // getter and setter
     public Integer getLength() {
         return length;
     }
-
-    // public void setLength(Integer lenth) {
-    //     this.length = lenth;
-    // }
 
     public Linkendlist() {
         this.head = null;
@@ -29,15 +24,11 @@ public class Linkendlist<E> {
     private Node<E> getNode(Integer pos) throws ListEmptyException {
         if (isEmpty()) {
             throw new ListEmptyException("Indice Fuera de rango");
-            // System.out.println("lista vacia");
-            // return null;
         } else if (pos < 0 || pos >= length) {
             throw new ListEmptyException("Indice Fuera de rango");
-            // System.out.println("Fuera de rango");
-            // return null;
         } else if (pos == 0) {
             return head;
-        } else if ((length.intValue()-1) == pos.intValue()) {
+        } else if ((length.intValue() - 1) == pos.intValue()) {
             return last;
         } else {
             Node<E> search = head;
@@ -115,13 +106,10 @@ public class Linkendlist<E> {
     public String print() {
         if (isEmpty()) {
             return "La lista esta vacia";
-
         } else {
-            // head = null
             StringBuilder resp = new StringBuilder();
             Node<E> help = head;
             while (help != null) {
-                // resp += help.getData() + " -> ;
                 resp.append(help.getData()).append(" -> ");
                 help = help.getNext();
             }
@@ -138,10 +126,9 @@ public class Linkendlist<E> {
         head = null;
         last = null;
         length = 0;
-
     }
 
-    protected E deleteFirst () throws ListEmptyException {
+    protected E deleteFirst() throws ListEmptyException {
         if (isEmpty()) {
             throw new ListEmptyException("La lista se encuentra vacia");
         } else {
@@ -155,29 +142,6 @@ public class Linkendlist<E> {
             return element;
         }
     }
-
-    // protected E deleteLast() throws ListEmptyException {
-    //     if (isEmpty()) {
-    //         throw new ListEmptyException("La lista se encuentra vacia");
-    //     } else {
-    //         E element = last.getData();
-    //         Node<E> aux = getNode(length - 2);
-    //         if (aux == null) {
-    //             last = null;
-    //             if (length == 2) {
-    //                 last = head;
-    //             } else {
-    //                 head = null;
-    //             }   
-    //         } else {
-    //             last = null;
-    //             last = aux;
-    //             last.setNext(null);
-    //         }
-    //         length --;
-    //         return element;
-    //     }
-    // }
 
     protected E deleteLast() throws ListEmptyException {
         if (isEmpty()) {
@@ -197,7 +161,6 @@ public class Linkendlist<E> {
             return element;
         }
     }
-    
 
     public E delete(Integer pos) throws ListEmptyException {
         if (isEmpty()) {
@@ -220,35 +183,14 @@ public class Linkendlist<E> {
         }
     }
 
-    // public E delete(Integer pos) throws ListEmptyException {
-    //     if (isEmpty()) {
-    //         throw new ListEmptyException("La lista se encuentra vacia");
-    //     } else if (pos < 0 || pos >= length) {
-    //         throw new ListEmptyException("Indice fuera de rango");
-    //     } else if (pos == 0) {
-    //         return deleteFirst();
-    //     } else if (length.intValue() == pos.intValue()) {
-    //         return deleteLast();
-    //     } else {
-    //         Node<E> preview = getNode(pos - 1);
-    //         Node<E> actualy = getNode(pos);
-    //         E element = preview.getData();
-    //         Node<E> next = actualy.getNext();
-    //         actualy = null;
-    //         preview.setNext(next);
-    //         length--;
-    //         return element;
-    //     }
-    // }
-
-    public E[] toArray(){
+    public E[] toArray() {
         Class clazz = null;
         E[] matriz = null;
         if (this.length > 0) {
             clazz = head.getData().getClass();
             matriz = (E[]) java.lang.reflect.Array.newInstance(clazz, this.length);
             Node<E> aux = head;
-            for (int i = 0; i < length; i ++){
+            for (int i = 0; i < length; i++) {
                 matriz[i] = aux.getData();
                 aux = aux.getNext();
             }
@@ -256,10 +198,10 @@ public class Linkendlist<E> {
         return matriz;
     }
 
-    public Linkendlist<E> toList(E[] matriz){
+    public Linkendlist<E> toList(E[] matriz) {
         clear();
         for (int i = 0; i < matriz.length; i++) {
-            this.add(matriz[i]);   
+            this.add(matriz[i]);
         }
         return this;
     }
@@ -268,28 +210,20 @@ public class Linkendlist<E> {
         Linkendlist<Double> lista = new Linkendlist<>();
         try {
             System.out.println("Hola");
-            // lista.update(10.00, 0);
-
             lista.add(56.7);
             lista.add(65.7);
             lista.add(1.0, 0);
             lista.add(4.7);
-            // System.out.println(lista.print());
             lista.add(9.0, 3);
             System.out.println(lista.print());
-            System.out.println(lista.get(lista.getLength()-1));
+            System.out.println(lista.get(lista.getLength() - 1));
             System.out.println("Actualizar");
             lista.update(10.00, 3);
             System.out.println(lista.print());
-            // lista.delete(4);
-            
-
         } catch (Exception e) {
             System.out.println("Error: " + e);
-            // TODO: handle exception
         }
         System.out.println(lista.print());
         System.out.println("Final");
     }
-
 }
