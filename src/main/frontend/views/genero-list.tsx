@@ -10,7 +10,7 @@ import { useDataProvider } from '@vaadin/hilla-react-crud';
 export const config: ViewConfig = {
   title: 'Genero',
   menu: {
-    icon: 'vaadin:clipboard-check',
+    icon: 'vaadin:tag',
     order: 2,
     title: 'Genero',
   },

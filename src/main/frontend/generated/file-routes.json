@@ -18,7 +18,7 @@
         "route": "album-list",
         "title": "Álbum",
         "menu": {
-          "icon": "vaadin:music",
+          "icon": "vaadin:disc",
           "order": 4,
           "title": "Álbum"
         },
@@ -38,21 +38,31 @@
       },
       {
         "route": "artistabanda-list",
+        "title": "Artista Banda",
+        "menu": {
+          "icon": "vaadin:group",
+          "order": 5,
+          "title": "Artista Banda"
+        },
         "flowLayout": false,
-        "params": {},
-        "title": "Artista Banda Lis"
+        "params": {}
       },
       {
         "route": "banda-list",
+        "title": "Banda",
+        "menu": {
+          "icon": "vaadin:group",
+          "order": 2,
+          "title": "Banda"
+        },
         "flowLayout": false,
-        "params": {},
-        "title": "Banda List"
+        "params": {}
       },
       {
         "route": "cancion-list",
         "title": "Cancion",
         "menu": {
-          "icon": "vaadin:clipboard-check",
+          "icon": "vaadin:music",
           "order": 3,
           "title": "Cancion"
         },
@@ -63,7 +73,7 @@
         "route": "genero-list",
         "title": "Genero",
         "menu": {
-          "icon": "vaadin:clipboard-check",
+          "icon": "vaadin:tag",
           "order": 2,
           "title": "Genero"
         },

@@ -14,7 +14,7 @@ import Album from 'Frontend/generated/com/unl/estrdts/base/models/Album';
 export const config: ViewConfig = {
   title: 'Cancion',
   menu: {
-    icon: 'vaadin:clipboard-check',
+    icon: 'vaadin:music',
     order: 3,
     title: 'Cancion',
   },

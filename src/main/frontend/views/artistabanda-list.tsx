@@ -11,14 +11,14 @@ import { ArtistaBandaService, ArtistaService, CancionService } from 'Frontend/ge
 import Artista from 'Frontend/generated/com/unl/estrdts/base/models/Artista';
 import Artista_Banda from 'Frontend/generated/com/unl/estrdts/base/models/Artista_Banda';
 
-/*export const config: ViewConfig = {
-  title: 'ArtistaBanda',
+export const config: ViewConfig = {
+  title: 'Artista Banda',
   menu: {
-    icon: 'vaadin:clipboard-check',
+    icon: 'vaadin:group',
     order: 5,
-    title: 'ArtistaBanda',
+    title: 'Artista Banda',
   },
-};*/
+};
 
 type BandaEntryFormProps = {
   onBandaCreated?: () => void;

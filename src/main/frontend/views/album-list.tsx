@@ -10,7 +10,7 @@ import { useDataProvider } from '@vaadin/hilla-react-crud';
 export const config: ViewConfig = {
   title: 'Álbum',
   menu: {
-    icon: 'vaadin:music',
+    icon: 'vaadin:disc',
     order: 4,
     title: 'Álbum',
   },
