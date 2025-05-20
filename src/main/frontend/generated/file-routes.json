@@ -1,0 +1,86 @@
+[
+  {
+    "route": "",
+    "flowLayout": false,
+    "params": {},
+    "title": "Main Layout",
+    "children": [
+      {
+        "route": "",
+        "menu": {
+          "exclude": true
+        },
+        "flowLayout": false,
+        "params": {},
+        "title": "Main"
+      },
+      {
+        "route": "album-list",
+        "title": "Álbum",
+        "menu": {
+          "icon": "vaadin:music",
+          "order": 4,
+          "title": "Álbum"
+        },
+        "flowLayout": false,
+        "params": {}
+      },
+      {
+        "route": "artista-list",
+        "title": "Artista",
+        "menu": {
+          "icon": "vaadin:clipboard-check",
+          "order": 4,
+          "title": "Artista"
+        },
+        "flowLayout": false,
+        "params": {}
+      },
+      {
+        "route": "artistabanda-list",
+        "flowLayout": false,
+        "params": {},
+        "title": "Artista Banda Lis"
+      },
+      {
+        "route": "banda-list",
+        "flowLayout": false,
+        "params": {},
+        "title": "Banda List"
+      },
+      {
+        "route": "cancion-list",
+        "title": "Cancion",
+        "menu": {
+          "icon": "vaadin:clipboard-check",
+          "order": 3,
+          "title": "Cancion"
+        },
+        "flowLayout": false,
+        "params": {}
+      },
+      {
+        "route": "genero-list",
+        "title": "Genero",
+        "menu": {
+          "icon": "vaadin:clipboard-check",
+          "order": 2,
+          "title": "Genero"
+        },
+        "flowLayout": false,
+        "params": {}
+      },
+      {
+        "route": "task-list",
+        "title": "Task List",
+        "menu": {
+          "icon": "vaadin:clipboard-check",
+          "order": 1,
+          "title": "Task List"
+        },
+        "flowLayout": false,
+        "params": {}
+      }
+    ]
+  }
+]
